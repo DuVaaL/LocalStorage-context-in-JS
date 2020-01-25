@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalStorage in js</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            background: #0984e3 center no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+            }
+
+        *, *:before, *:after {
+            box-sizing: inherit; 
+            }
+        
+        .wrapper {
+           padding: 20px;
+           max-width: 350px;
+           background: rgba(255,255,255,0.95);
+            box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+       }
+       h2 {
+             text-align: center;
+            margin: 0;
+             font-weight: 200;
+         }
+
+         .plates{
+             text-align: left;
+              margin: 0;
+              padding: 0;
+              list-style: none;
+         }
+
+         .plates li {
+             border-bottom: solid 1px rgba(0,0, 0, 0.2);
+             display: flex;
+             font-weight: bold;
+             padding: 10px 0;
+         }
+
+         .plates label {
+                flex: 1;
+                cursor: pointer;
+                }
+
+         .plates input {
+                display: none;
+                }
+
+         .plates input + label:before {
+                content: '⬜️';
+                margin-right: 10px;
+                }
+
+          .plates input:checked + label:before {
+                content: '🌮';
+                }
+            .add-items {
+                    margin-top: 20px;
+                    }
+
+            .add-items input {
+            padding: 10px;
+            margin-bottom: 5px;
+            outline: 0;
+            border: 1px solid rgba(0,0,0,0.1);
+            }
+               
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h2> Plat Local</h2>
+            <p></p>
+            <ul class="plates">
+                <li>Chargement des plats...</li>
+            </ul>
+            <form class="add-items">
+                <input type="text" name="item" placeholder="Nom du plat" required>
+                <input type="submit" value=" + Ajouter un Plat">
+            </form>
+    </div>
+
+
+    <script src="main.js" ></script>
+</body>
+</html>
